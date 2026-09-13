@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Guilde</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="barre">
+  <div class="bloc titre">
+    <span class="sigle">⚜</span>
+    <div>
+      <div class="nomguilde">La Guilde</div>
+      <div id="horloge" class="petit">Jour 1 — 00h</div>
+    </div>
+  </div>
+
+  <div class="bloc vitesses">
+    <button data-v="0" class="vit" title="Pause">❚❚</button>
+    <button data-v="1" class="vit" title="Accéléré 1">▶</button>
+    <button data-v="2" class="vit" title="Accéléré 2">▶▶</button>
+  </div>
+
+  <div class="bloc jauges">
+    <div class="jauge"><span class="lab">Trésorerie</span><span id="jOr" class="val or">—</span></div>
+    <div class="jauge"><span class="lab">Réputation</span><span id="jRep" class="val">—</span></div>
+    <div class="jauge"><span class="lab">Membres</span><span id="jMem" class="val">—</span></div>
+    <div class="jauge"><span class="lab">Prochaine paie</span><span id="jPaie" class="val">—</span></div>
+  </div>
+
+  <div class="bloc actions">
+    <button id="btnSave" class="mini">Sauvegarder</button>
+    <button id="btnOptions" class="mini">Options</button>
+  </div>
+</header>
+
+<div id="appli">
+  <nav id="onglets">
+    <button data-o="requetes">🔔 Requêtes <em id="nReq"></em></button>
+    <button data-o="tableau">📋 Tableau <em id="nTab"></em></button>
+    <button data-o="encours">🚩 En cours <em id="nCours"></em></button>
+    <button data-o="rapports">📜 Rapports <em id="nRap"></em></button>
+    <button data-o="membres">🛡 Membres <em id="nMem"></em></button>
+    <button data-o="recrutement">🤝 Recrutement <em id="nCand"></em></button>
+    <button data-o="batiment">🏗 Bâtiment</button>
+    <button data-o="employes">👔 Employés</button>
+    <button data-o="commerce">💰 Commerce</button>
+  </nav>
+
+  <main id="panneau"></main>
+
+  <aside id="journal">
+    <h3>Journal</h3>
+    <div id="logs"></div>
+  </aside>
+</div>
+
+<div id="modale" class="cache"><div id="modaleBoite"></div></div>
+
+<script src="js/data/equipement.js"></script>
+<script src="js/data/donnees.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/etat.js"></script>
+<script src="js/systemes/equipement.js"></script>
+<script src="js/core/calculs.js"></script>
+<script src="js/systemes/membres.js"></script>
+<script src="js/systemes/requetes.js"></script>
+<script src="js/systemes/missions.js"></script>
+<script src="js/systemes/recrutement.js"></script>
+<script src="js/systemes/commerce.js"></script>
+<script src="js/systemes/batiment.js"></script>
+<script src="js/systemes/temps.js"></script>
+<script src="js/ui/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
